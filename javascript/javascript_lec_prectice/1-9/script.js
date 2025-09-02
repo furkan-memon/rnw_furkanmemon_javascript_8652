@@ -36,3 +36,19 @@
       let str ="The quick brown fox jumps over the lazy dog quick.";
     console.log(str.lastIndexOf("T"));
 }
+{
+      let str ="The quick brown fox jumps over the lazy dog quick.";
+   console.log(str.slice(31));
+   console.log(str.slice(4, 19));
+   console.log(str.slice(-4));
+//    A new string containing the extracted section of the string.
+}
+
+{
+    let str ="The quick brown fox jumps over the lazy dog quick.";
+    console.log(str.substring(1, 3));
+    // A new string containing the specified part of the given string.
+}
+{
+    
+}
