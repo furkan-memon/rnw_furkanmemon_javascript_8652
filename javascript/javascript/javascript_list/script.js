@@ -1,10 +1,10 @@
-// JavaScript Program To Print Hello World
+// 1 JavaScript Program To Print Hello World
 {
 
     console.log("Hello, World!");
 }
 
-// JavaScript Program to Add Two Numbers
+// 2 JavaScript Program to Add Two Numbers
 {
     let num1 = 5;
     let num2 = 10;
@@ -12,7 +12,7 @@
     console.log("The sum is: " + sum);
 }
 
-// JavaScript Program to Find the Square Root
+// 5 JavaScript Program to Find the Square Root
 {
  let number = 16;
     let result = 0;
@@ -32,7 +32,7 @@
 
 }
 
-// JavaScript Program to Calculate the Area of a Triangle
+// 4 JavaScript Program to Calculate the Area of a Triangle
 {
       let b = parseInt(prompt("Enter the base : "))
      let h = parseInt(prompt("Enter the height :"))
@@ -41,7 +41,7 @@
  
      console.log("Area of triangle is : ", area)
 }
-// JavaScript Program to Swap Two Variables
+// 6 JavaScript Program to Swap Two Variables
 {
 
     let a = 5;
@@ -54,19 +54,19 @@
     
     console.log("After swapping: a = " + a + ", b = " + b);
 }
-// JavaScript Program to Convert Kilometres to Miles
+// 7 JavaScript Program to Convert Kilometres to Miles
 {
     let Kilometres = 10;
     let miles = Kilometres * 0.621371;
     console.log(Kilometres + " kilometers is equal to " + miles + " miles.");
 }
-// Javascript Program to Convert Celsius to Fahrenheit
+// 8 JavaScript Program to Convert Celsius to Fahrenheit
 {
     let celsius = 25;
     let Fahrenheit = (celsius * 9/5) + 32;
     console.log( celsius + "°C is equal to " + Fahrenheit + "°F." );
 }
-// Javascript Program to Check if a number is Positive, Negative, or Zero
+// 9 JavaScript Program to Check if a number is Positive, Negative, or Zero
 {
     let num = parseInt(prompt("Enter a number: "));
     if (num >0){
@@ -79,7 +79,7 @@
         console.log("The number is zero.");
     }
 }
-// Javascript Program to Check if a Number is Odd or Even
+// 10 JavaScript Program to Check if a Number is Odd or Even
 {
     let number = parseInt(prompt("Enter a number: "));
     if (number % 2 === 0) {
@@ -88,7 +88,7 @@
         console.log(number + " is an odd number.");
     }
 }
-// JavaScript Program to Find the Largest Among Three Numbers
+// 11 JavaScript Program to Find the Largest Among Three Numbers
 {
      let num1 = parseFloat(prompt("Enter first number: "));
     let num2 = parseFloat(prompt("Enter second number: "));
@@ -104,7 +104,7 @@
     }
     console.log("The largest number is: " + largest);
 }
-// JavaScript Program to Check Prime Number
+// 12 JavaScript Program to Check Prime Number
 {
     let number = parseInt(prompt("Enter a positive integer: "));
     let isPrime = true;
@@ -125,7 +125,7 @@
         console.log(number + " is not a prime number.");
     }
 }
-// JavaScript Program to Print All Prime Numbers in an Interval
+// 13 JavaScript Program to Print All Prime Numbers in an Interval
 {
     let lower = parseInt(prompt("Enter the lower bound: "));
     let upper = parseInt(prompt("Enter the upper bound: "));
@@ -148,6 +148,7 @@
         }
     }
 }
+// 14 JavaScript Program to Find the Factorial of a Number
 {
     let number = parseInt(prompt("Enter a positive integer: "))
     let  sum = 1;
