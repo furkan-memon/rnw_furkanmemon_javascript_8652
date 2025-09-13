@@ -8,28 +8,31 @@
       "Bhai: Tune result mummy ko dikhaya? Chhota Bhai: Nahi, Wi-Fi off kar diya… mummy busy hai TV dekhne me. 🤣",
       "Papa: Ye phone se chipka kyu rehta hai?",
       "Beta: Papa phone chipakta hai, main to bas scroll karta hu. 😆"
-    ];
+    ]
 
     function Joke() {
-      let randomIndex = Math.floor(Math.random() * jokes.length);
-      document.getElementById("joke").innerText = jokes[randomIndex];
+      let randomIndex = Math.floor(Math.random() * jokes.length)
+      document.getElementById("joke").innerText = jokes[randomIndex]
     }
 
     
     function rollDice() {
-      let diceValues = [];
+      let diceValues = []
       for (let i = 0; i < 2; i++) {
-        diceValues[i] = Math.floor(Math.random() * 6) + 1;
+        diceValues[i] = Math.floor(Math.random() * 6) + 1
       }
 
-      document.getElementById("dice1").innerText = "🎲 " + diceValues[0];
-      document.getElementById("dice2").innerText = "🎲 " + diceValues[1];
+      document.getElementById("dice1").innerText = "🎲 " + diceValues[0]
+      document.getElementById("dice2").innerText = "🎲 " + diceValues[1]
 
       if (diceValues[0] > diceValues[1]) {
-        document.getElementById("diceResult").innerText = "Player 1 Wins! 🏆";
+        document.getElementById("diceResult").innerText = "Player 1 Wins! 🏆"
+          
       } else if (diceValues[0] < diceValues[1]) {
-        document.getElementById("diceResult").innerText = "Player 2 Wins! 🏆";
+        document.getElementById("diceResult").innerText = "Player 2 Wins! 🏆"
+          
       } else {
-        document.getElementById("diceResult").innerText = "It's a Tie! 🎯";
+        document.getElementById("diceResult").innerText = "It's a Tie! 🎯"
       }
+
     }
