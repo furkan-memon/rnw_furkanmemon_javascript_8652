@@ -29,7 +29,7 @@
     button:hover {
       background: #555;
     }
-    #jokeOutput {
+    #joke{
       margin-top: 10px;
       font-style: italic;
       font-size: 18px;
@@ -42,4 +42,5 @@
       font-weight: bold;
       margin-top: 10px;
       font-size: 18px;
+
     }
