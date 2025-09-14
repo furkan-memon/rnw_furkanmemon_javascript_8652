@@ -7,3 +7,4 @@ if (isSure) {
 } else {
     alert("Hello " + name + "! You cancelled the action.");
 }
+
