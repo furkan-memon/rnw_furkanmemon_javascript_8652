@@ -299,17 +299,24 @@
 //     console.log(str.trim());
 // }
 // 29 JavaScript Program to Print the Fibonacci Sequence
+// {
+//     let n = parseInt(prompt("Enter a number: "))
+//     let num1 = 0, num2 = 1
+//     let num3
+//     console.log("Fibonacci Series:")
+//     for (let i = 1; i <= n; i++) {
+//         console.log(num1)
+//         num3 = num1 + num2
+//         num1 = num2
+//         num2 = num3
+//     }
+
+
+// }
+// 30 JavaScript Program to Display Date and Time
 {
-    let n = parseInt(prompt("Enter a number: "))
-    let num1 = 0, num2 = 1
-    let num3
-    console.log("Fibonacci Series:")
-    for (let i = 1; i <= n; i++) {
-        console.log(num1)
-        num3 = num1 + num2
-        num1 = num2
-        num2 = num3
-    }
-
-
+    let now = new Date();
+    console.log("Current date and time:", now);
+    
 }
+
