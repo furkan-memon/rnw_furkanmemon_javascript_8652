@@ -314,9 +314,136 @@
 
 // }
 // 30 JavaScript Program to Display Date and Time
-{
-    let now = new Date();
-    console.log("Current date and time:", now);
+// {
+//     let now = new Date();
+//     console.log("Current date and time:", now);
     
-}
+// }
+// //  31 JavaScript Program to Make a Simple Calculator
+// {
+//     let num1 = parseInt(prompt("Enter first number: "))
+//     let num2 = parseInt(prompt("Enter second number: "))
+//     let operator = prompt("Enter an operator (+, -, *, /): ")
+//     let result
+//     switch (operator) {
+//         case "+":
+//             result = num1 + num2
+//             break
+//         case "-":
+//             result = num1 - num2
+//             break
+//         case "*":
+//             result = num1 * num2
+//             break
+//         case "/":
+//             result = num1 / num2
+//             break
+//         default:
+//             console.log("Invalid operator")
+//     }
+//     console.log("Result: " + result)
+// }
+// // 32 JavaScript Program to Find the Sum of Natural Numbers
+// {
+//     let n = parseInt(prompt("Enter a positive integer: "))
+//     let sum = 0
+//     for (let i = 1; i <= n; i++) {
+//         sum += i
+//     }
+//     console.log("Sum of natural numbers up to " + n + " is: " + sum)
+// }
+// // 33 JavaScript Program to Check Leap Year
+// {
+//     let year = parseInt(prompt("Enter a year: "))
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         console.log(year + " is a leap year.")
+//     } else {
+//         console.log(year + " is not a leap year.")
+//     }
+// }
+// 34 JavaScript Program to Format the Date
+// {
+//     let date = new Date()
+//     let day = date.getDay()
+//     let month =date.getMonth() + 1
+//     let year = date.getFullYear()
+//     console.log("Formatted Date: " + day + "/" + month + "/" + year)
+// }
+// 35 Javascript Program to Display Current Date
+// {
+//  let date = new Date()
+//  console.log(date.toDateString());
+ 
+// }
+// 36 JavaScript Program to Compare The Value of Two Dates
+// {
+//     let date = new Date(2006, 6, 19)
+//     let date1 = new Date(2010, 7, 20)
+//     if(date > date1){
+//         console.log("date is after date1");
+//     }
+//     else if(date < date1){
+//         console.log("date1 is after date");
+//     }
+//     else{
+//         console.log("BOth dates are equal");
+        
+// }
+// }
+// 37 JavaScript Program to Convert Date to Number
+// {
+//     let num= new Date(2020, 4, 15)
+//     console.log(num.getTime());
+    
+// }
 
+
+// 
+// // 38 JavaScript Program to Remove a Property from an Object
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     delete obj.age
+//     console.log(obj);
+// }
+// 39 JavaScript Program to Check if a Key Exists in an Object
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     console.log("age" in obj);
+// }
+// 40 JavaScript Program to Clone a JS Object
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     let clone = Object.assign({}, obj)
+//     console.log(clone);
+// }
+// 41 JavaScript Program to Loop Through an Object
+{
+    let obj = { name: "John", age: 30, city: "New York" }
+    for (let key in obj) {
+        console.log(key + ": " + obj[key]);
+    }
+}
+// 42 JavaScript Program to Merge Property of Two Objects
+{
+    let obj1 = { name: "John", age: 30 }
+    let obj2 = { city: "New York", country: "USA" }
+    let merged = Object.assign({}, obj1, obj2)
+    console.log(merged);
+}
+// 43 JavaScript Program to Count the Number of Keys/Properties in an Object
+{
+    let obj = { name: "John", age: 30, city: "New York" }
+    console.log(Object.keys(obj).length);
+}
+// 44 JavaScript Program to Add Key/Value Pair to an Object
+{
+    let obj = { name: "John", age: 30, city: "New York" }
+    obj.country = "USA"
+    console.log(obj);
+}
+// 45 JavaScript Program to Convert Objects to Strings
+{
+    let obj = { name: "John", age: 30, city: "New York" }
+    let jsonString = JSON.stringify(obj)
+    console.log(jsonString);
+}
