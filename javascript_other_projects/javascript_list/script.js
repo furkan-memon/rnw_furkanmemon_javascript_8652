@@ -417,33 +417,87 @@
 //     console.log(clone);
 // }
 // 41 JavaScript Program to Loop Through an Object
-{
-    let obj = { name: "John", age: 30, city: "New York" }
-    for (let key in obj) {
-        console.log(key + ": " + obj[key]);
-    }
-}
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     for (let key in obj) {
+//         console.log(key + ": " + obj[key]);
+//     }
+// }
 // 42 JavaScript Program to Merge Property of Two Objects
-{
-    let obj1 = { name: "John", age: 30 }
-    let obj2 = { city: "New York", country: "USA" }
-    let merged = Object.assign({}, obj1, obj2)
-    console.log(merged);
-}
+// {
+//     let obj1 = { name: "John", age: 30 }
+//     let obj2 = { city: "New York", country: "USA" }
+//     let merged = Object.assign({}, obj1, obj2)
+//     console.log(merged);
+// }
 // 43 JavaScript Program to Count the Number of Keys/Properties in an Object
-{
-    let obj = { name: "John", age: 30, city: "New York" }
-    console.log(Object.keys(obj).length);
-}
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     console.log(Object.keys(obj).length);
+// }
 // 44 JavaScript Program to Add Key/Value Pair to an Object
-{
-    let obj = { name: "John", age: 30, city: "New York" }
-    obj.country = "USA"
-    console.log(obj);
-}
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     obj.country = "USA"
+//     console.log(obj);
+// }
 // 45 JavaScript Program to Convert Objects to Strings
+// {
+//     let obj = { name: "John", age: 30, city: "New York" }
+//     let jsonString = JSON.stringify(obj)
+//     console.log(jsonString);
+// }
+// 46 JavaScript Program to Remove Specific Item From an Array
 {
-    let obj = { name: "John", age: 30, city: "New York" }
-    let jsonString = JSON.stringify(obj)
-    console.log(jsonString);
+    let arr = [1, 2, 3, 4, 5]
+  arr.splice(2, 1)
+  console.log(arr);
+  
+}
+// 47 . JavaScript Program to Check if An Array Contains a Specified Value
+{
+    let arr = [1, 2, 3, 4, 5]
+  console.log(arr.includes(2, 1));
+}
+// 48 JavaScript Program to Insert Item in an Array
+{
+    let arr = [1, 2, 3, 4, 5]
+  arr.push(2, 0, 6)
+  console.log(arr);
+}
+// 49 JavaScript Program to Append an Object to an Array
+{
+    let arr = [1, 2, 3, 4, 5]
+  let obj = { id: 1, name: "John" }
+  arr.push(obj)
+  console.log(arr);
+}
+// 50 JavaScript Program to Empty an Array
+{
+    let arr = [1, 2, 3, 4, 5]
+  arr.length = 0
+  console.log(arr);
+}
+// 51 JavaScript Program to Add Element to Start of an Array
+{
+    let arr = [1, 2, 3, 4, 5]
+    arr.unshift(0)
+    console.log(arr);
+}
+// 52 JavaScript Program to Remove Duplicates From Array
+{
+    let arr = [1, 2, 2, 3, 4, 4, 5]
+    let Arr = [...new Set(arr)]
+    console.log(Arr);
+}
+// 53 JavaScript Program to Merge Two Arrays and Remove Duplicate Items
+{
+    let arr = [1, 2, 3, 4, 5]
+    let arr1  = [6, 7, 8,8, 9, 10]
+    let newarr = arr.concat(arr1)
+    let Arr = [...new Set(newarr)]
+    console.log(Arr);
+    
+
+
 }
