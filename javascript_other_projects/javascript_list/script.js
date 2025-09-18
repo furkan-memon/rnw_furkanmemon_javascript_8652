@@ -12,6 +12,16 @@
 //     console.log("The sum is: " + sum);
 // }
 
+
+// // 4 JavaScript Program to Calculate the Area of a Triangle
+// {
+//       let b = parseInt(prompt("Enter the base : "))
+//      let h = parseInt(prompt("Enter the height :"))
+ 
+//      let area = 0.5 * b * h
+ 
+//      console.log("Area of triangle is : ", area)
+// }
 // // 5 JavaScript Program to Find the Square Root
 // {
 //  let number = 16;
@@ -30,16 +40,6 @@
 //         console.log("Square root of " + number + " is " + result);
 //     }
 
-// }
-
-// // 4 JavaScript Program to Calculate the Area of a Triangle
-// {
-//       let b = parseInt(prompt("Enter the base : "))
-//      let h = parseInt(prompt("Enter the height :"))
- 
-//      let area = 0.5 * b * h
- 
-//      console.log("Area of triangle is : ", area)
 // }
 // // 6 JavaScript Program to Swap Two Variables
 // {
@@ -448,56 +448,109 @@
 //     console.log(jsonString);
 // }
 // 46 JavaScript Program to Remove Specific Item From an Array
-{
-    let arr = [1, 2, 3, 4, 5]
-  arr.splice(2, 1)
-  console.log(arr);
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//   arr.splice(2, 1)
+//   console.log(arr);
   
-}
+// }
 // 47 . JavaScript Program to Check if An Array Contains a Specified Value
-{
-    let arr = [1, 2, 3, 4, 5]
-  console.log(arr.includes(2, 1));
-}
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//   console.log(arr.includes(2, 1));
+// }
 // 48 JavaScript Program to Insert Item in an Array
-{
-    let arr = [1, 2, 3, 4, 5]
-  arr.push(2, 0, 6)
-  console.log(arr);
-}
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//   arr.push(2, 0, 6)
+//   console.log(arr);
+// }
 // 49 JavaScript Program to Append an Object to an Array
-{
-    let arr = [1, 2, 3, 4, 5]
-  let obj = { id: 1, name: "John" }
-  arr.push(obj)
-  console.log(arr);
-}
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//   let obj = { id: 1, name: "John" }
+//   arr.push(obj)
+//   console.log(arr);
+// }
 // 50 JavaScript Program to Empty an Array
-{
-    let arr = [1, 2, 3, 4, 5]
-  arr.length = 0
-  console.log(arr);
-}
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//   arr.length = 0
+//   console.log(arr);
+// }
 // 51 JavaScript Program to Add Element to Start of an Array
-{
-    let arr = [1, 2, 3, 4, 5]
-    arr.unshift(0)
-    console.log(arr);
-}
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//     arr.unshift(0)
+//     console.log(arr);
+// }
 // 52 JavaScript Program to Remove Duplicates From Array
-{
-    let arr = [1, 2, 2, 3, 4, 4, 5]
-    let Arr = [...new Set(arr)]
-    console.log(Arr);
-}
+// {
+//     let arr = [1, 2, 2, 3, 4, 4, 5]
+//     let Arr = [...new Set(arr)]
+//     console.log(Arr);
+// }
 // 53 JavaScript Program to Merge Two Arrays and Remove Duplicate Items
-{
-    let arr = [1, 2, 3, 4, 5]
-    let arr1  = [6, 7, 8,8, 9, 10]
-    let newarr = arr.concat(arr1)
-    let Arr = [...new Set(newarr)]
-    console.log(Arr);
-    
+// {
+//     let arr = [1, 2, 3, 4, 5]
+//     let arr1  = [6, 7, 8,8, 9, 10]
+//     let newarr = arr.concat(arr1)
+//     let Arr = [...new Set(newarr)]
+//     console.log(Arr);
+// }
+// 54 JavaScript Program to Guess a Random Number
+// {
+//     let num = Math.floor(Math.random() * 100) + 1;
+//     let userNum = prompt("Enter a number: ");
+//     while (userNum != num) {
+//     userNum = prompt("Increment  number ");
+//     }
+//     console.log("Correct!");
+// }
+// 55 JavaScript Program to Check the Number of Occurrences of a Character in the String
+// {
+//     let str = "hello javascript"
+//     let char = 'h'
+//     let count = 0
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === char) {
+            
+//         }
+//     }
+//     console.log("Number of occurrences of '" + char + "': " + count);
+// }
+// 56 JavaScript Program to Replace All Occurrences of a String
+// {
+// let str =  "hello world, hello universe, hello JavaScript!"
+// let regex = /hello/g
+// let r = str.replaceAll( regex,"HI");
+// console.log(r);
 
+// }
+// 57 . JavaScript Program to Create Multiline Strings
+// {
+//     let str = `This is the first line.
+//       This is the second line. `
+// console.log(str);
+
+// }
+//  58 JavaScript Program to Check if a String Starts With Another String
+// {
+//     let str = "Hi , My name is Amaan"
+//     let str1 = "Hi"
+//     console.log(str.startsWith(str1));    
+// }
+// 59 JavaScript Program to Check Whether a String Contains a Substring
+// {
+//     let str = "Hi , My name is Amaan"
+//     let str1 = "Hi"
+//     console.log(str.includes(str1));
+    
+// }
+// 60 JavaScript Program to Replace all Instances of a Character in a String
+{
+    let str = "cat in the hat, cat on the mat"
+    let regex = /cat/g
+    console.log(str.replaceAll(regex,"Dog"));
 
 }
