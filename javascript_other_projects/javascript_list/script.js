@@ -519,3 +519,39 @@
 //     }
 //     console.log("Number of occurrences of '" + char + "': " + count);
 // }
+// 56 JavaScript Program to Replace All Occurrences of a String
+// {
+// let str =  "hello world, hello universe, hello JavaScript!"
+// let regex = /hello/g
+// let r = str.replaceAll( regex,"HI");
+// console.log(r);
+
+// }
+// 57 . JavaScript Program to Create Multiline Strings
+// {
+//     let str = `This is the first line.
+//       This is the second line. `
+// console.log(str);
+
+// }
+//  58 JavaScript Program to Check if a String Starts With Another String
+// {
+//     let str = "Hi , My name is Amaan"
+//     let str1 = "Hi"
+//     console.log(str.startsWith(str1));    
+// }
+// 59 JavaScript Program to Check Whether a String Contains a Substring
+// {
+//     let str = "Hi , My name is Amaan"
+//     let str1 = "Hi"
+//     console.log(str.includes(str1));
+    
+// }
+// 60 JavaScript Program to Replace all Instances of a Character in a String
+{
+    let str = "cat in the hat, cat on the mat"
+    let regex = /cat/g
+    console.log(str.replaceAll(regex,"Dog"));
+
+
+}
