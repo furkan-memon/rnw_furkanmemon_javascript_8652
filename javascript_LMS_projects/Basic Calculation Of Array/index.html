@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#FDF6F0] flex items-center justify-center min-h-screen">
+
+
+    <div class="bg-[#1B3C53] p-8 text-[#D2C1B6] rounded-3xl shadow-2xl w-[400px] flex flex-col items-center space-y-6">
+
+   
+        <div id="result"
+            class="bg-[#D2C1B6] text-[#1B3C53] w-full py-6 rounded-2xl text-center text-2xl font-bold shadow-inner">
+            Result will appear here
+        </div>
+
+
+        <input id="arrayInput" type="text" placeholder="Enter numbers (e.g. 5, 10, 15)"
+            class="w-full p-4 rounded-xl text-gray-800 text-lg border border-gray-300 focus:outline-none focus:ring-4 focus:ring-[#FFB347] bg-[#FFF9F5]">
+
+
+        <div class="grid grid-cols-2 gap-4 w-full text-[#1B3C53]">
+            <button onclick="findSum()"
+                class="bg-[#D2C1B6] hover:bg-[#234C6A] hover:text-[#D2C1B6] hover:scale-105 transition-all rounded-full py-4 text-xl font-bold shadow-md">➕
+                Sum</button>
+            <button onclick="findAverage()"
+                class="bg-[#D2C1B6] hover:bg-[#234C6A]  hover:text-[#D2C1B6] hover:scale-105 transition-all rounded-full py-4 text-xl font-bold shadow-md">📊
+                Average</button>
+            <button onclick="findMax()"
+                class="bg-[#D2C1B6] hover:bg-[#234C6A]  hover:text-[#D2C1B6] hover:scale-105 transition-all rounded-full py-4 text-xl font-bold shadow-md">🔼
+                Max</button>
+            <button onclick="findMin()"
+                class="bg-[#D2C1B6] hover:bg-[#234C6A]  hover:text-[#D2C1B6] hover:scale-105 transition-all rounded-full py-4 text-xl font-bold shadow-md">🔽
+                Min</button>
+        </div>
+
+    </div>
+
+    <script>
+        function getArray() {
+            let input = document.getElementById("arrayInput").value;
+            if (!input.trim()) {
+                displayResult("⚠️ Please enter numbers!");
+                return null;
+            }
+
+            let arr = input.split(",").map(num => parseFloat(num.trim()));
+            if (arr.some(isNaN)) {
+                displayResult("❌ Invalid input!");
+                return null;
+            }
+            return arr;
+        }
+
+        function displayResult(message) {
+            document.getElementById("result").innerText = message;
+        }
+
+        function findSum() {
+            let arr = getArray();
+            if (!arr) return;
+            displayResult(`✅ Sum = ${arr.reduce((a, b) => a + b, 0)}`);
+        }
+
+        function findAverage() {
+            let arr = getArray();
+            if (!arr) return;
+            displayResult(`📊 Average = ${(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2)}`);
+        }
+
+        function findMax() {
+            let arr = getArray();
+            if (!arr) return;
+            displayResult(`🔼 Max = ${Math.max(...arr)}`);
+        }
+
+        function findMin() {
+            let arr = getArray();
+            if (!arr) return;
+            displayResult(`🔽 Min = ${Math.min(...arr)}`);
+        }
+    </script>
+
+</body>
+
+</html>
