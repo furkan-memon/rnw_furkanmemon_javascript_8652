@@ -1,17 +1,17 @@
 
 function getArray() {
-    var input = document.getElementById("arrayInput").value;
+    let input = document.getElementById("arrayInput").value;
     if (input.trim() === "") {
         document.getElementById("result").innerText = "⚠️ Please enter numbers!";
         return null;
     }
 
-    var arr = input.split(",").map(function(num) {
+    let arr = input.split(",").map(function(num) {
         return parseFloat(num.trim());
     });
 
  
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (isNaN(arr[i])) {
             document.getElementById("result").innerText = "❌ Invalid input!";
             return null;
@@ -28,11 +28,11 @@ function displayResult(message) {
 
 
 function findSum() {
-    var arr = getArray();
+    let arr = getArray();
     if (arr === null) return;
 
-    var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
 
@@ -40,25 +40,25 @@ function findSum() {
 }
 
 function findAverage() {
-    var arr = getArray();
+    let arr = getArray();
     if (arr === null) return;
 
-    var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
 
-    var avg = sum / arr.length;
+    let avg = sum / arr.length;
     displayResult("📊 Average = " + avg);
 }
 
 
 function findMax() {
-    var arr = getArray();
+    let arr = getArray();
     if (arr === null) return;
 
-    var max = arr[0];
-    for (var i = 1; i < arr.length; i++) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i];
         }
@@ -69,11 +69,11 @@ function findMax() {
 
 
 function findMin() {
-    var arr = getArray();
+    let arr = getArray();
     if (arr === null) return;
 
-    var min = arr[0];
-    for (var i = 1; i < arr.length; i++) {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
         if (arr[i] < min) {
             min = arr[i];
         }
