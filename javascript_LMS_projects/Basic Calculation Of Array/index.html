@@ -41,51 +41,8 @@
 
     </div>
 
-    <script>
-        function getArray() {
-            let input = document.getElementById("arrayInput").value;
-            if (!input.trim()) {
-                displayResult("⚠️ Please enter numbers!");
-                return null;
-            }
-
-            let arr = input.split(",").map(num => parseFloat(num.trim()));
-            if (arr.some(isNaN)) {
-                displayResult("❌ Invalid input!");
-                return null;
-            }
-            return arr;
-        }
-
-        function displayResult(message) {
-            document.getElementById("result").innerText = message;
-        }
-
-        function findSum() {
-            let arr = getArray();
-            if (!arr) return;
-            displayResult(`✅ Sum = ${arr.reduce((a, b) => a + b, 0)}`);
-        }
-
-        function findAverage() {
-            let arr = getArray();
-            if (!arr) return;
-            displayResult(`📊 Average = ${(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2)}`);
-        }
-
-        function findMax() {
-            let arr = getArray();
-            if (!arr) return;
-            displayResult(`🔼 Max = ${Math.max(...arr)}`);
-        }
-
-        function findMin() {
-            let arr = getArray();
-            if (!arr) return;
-            displayResult(`🔽 Min = ${Math.min(...arr)}`);
-        }
-    </script>
-
+  
 </body>
 
 </html>
+
