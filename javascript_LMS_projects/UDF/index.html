@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Functions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+  <div class="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md space-y-6">
+
+
+    <div>
+      <h2 class="text-lg font-semibold mb-2">1. Simple Addition</h2>
+      <input id="num1" type="number" placeholder="Enter first number" class="border p-2 rounded w-full mb-2">
+      <input id="num2" type="number" placeholder="Enter second number" class="border p-2 rounded w-full mb-2">
+      <button onclick="Addition()" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Add</button>
+      <p id="addResult" class="mt-2 text-gray-700"></p>
+    </div>
+
+    <div>
+      <h2 class="text-lg font-semibold mb-2">2. Check Even or Odd</h2>
+      <input id="numEO" type="number" placeholder="Enter number" class="border p-2 rounded w-full mb-2">
+      <button onclick="EvenOdd()" class="bg-green-500 text-white px-4 py-2 rounded w-full">Check</button>
+      <p id="evenoddResult" class="mt-2 text-gray-700"></p>
+    </div>
+
+
+    <div>
+      <h2 class="text-lg font-semibold mb-2">3. Square of Number</h2>
+      <input id="numSquare" type="number" placeholder="Enter number" class="border p-2 rounded w-full mb-2">
+      <button onclick="Square()" class="bg-purple-500 text-white px-4 py-2 rounded w-full">Square</button>
+      <p id="squareR" class="mt-2 text-gray-700"></p>
+    </div>
+
+    <div>
+      <h2 class="text-lg font-semibold mb-2">4. String Capitalize</h2>
+      <input id="strCap" type="text" placeholder="Enter text" class="border p-2 rounded w-full mb-2">
+      <button onclick="capitalizeStr()" class="bg-pink-500 text-white px-4 py-2 rounded w-full">Capitalize</button>
+      <p id="capitalizeResult" class="mt-2 text-gray-700"></p>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
