@@ -554,3 +554,76 @@
 //     console.log(str.replaceAll(regex,"Dog"));
 
 // }
+// 61 JavaScript Program to Create Objects in Different Ways
+// {
+//     {
+//     // object method
+//     let anime = {
+//        firstname:"Monky ",
+//     lastname:"D luffy",
+//     fullname : function(){
+//       return this.firstname + " " + this.lastname
+//     }
+//   }
+//   console.log(anime.fullname());
+  
+// }
+// {
+//     let one_piece = {
+//   strawhat : ["luffy" , "zoro" ,"sanji"],
+//   whitebeard : ["whitebeard" , "Marco the Phoenix" ," gol d ace"],
+//   redhair : [" Shanks ", "Benn Beckman ", "Lucky Roux "]
+//  }
+//   console.log( one_piece.strawhat[2]);
+//  console.log( one_piece.whitebeard[0]);
+//  console.log(one_piece.redhair[1]);
+// }
+// {
+//     let one_piece = [
+//         { cap :"luffy", left :'zoro' ,right : "sanji"},
+//         { cap :"whitebeard", left :'Marco the Phoenix' ,right : "gol d ace"},
+//         { cap :" Shanks", left :'Benn Beckman' ,right : "Lucky Roux"}
+//     ]
+//     console.log(one_piece[2]);
+//     console.log(one_piece[0]);
+//     console.log(one_piece[1]);
+    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+// }
+// }
+// 62 . JavaScript Program to Display Fibonacci Sequence Using Recursion
+// {
+   
+
+//  function Fibonacci(n){
+//     let a = 0 ,b = 1,c
+    
+
+//     for (let i = 1; i<n; i++) {
+//          console.log(a)
+//        c = a + b
+//          a = b
+//        b = c
+        
+//     }
+//  }
+//  let n = parseInt(prompt("enter number"))
+//   console.log("Fibonacci sequence:")
+//   Fibonacci(n)
+// }
+// 63 JavaScript Program to Find Factorial of Number Using Recursion
+// {
+//     function Factorial(n){
+// sum = 1;
+// for(let i = 1;i<=n;i++){
+//     sum = sum * i;
+// }
+// return sum
+// }
+// let n = parseInt(prompt("enter number"))
+//   console.log("Factorial sequence:")
+// let risulte =  Factorial(n)
+// console.log(risulte);
+
+
+// }
