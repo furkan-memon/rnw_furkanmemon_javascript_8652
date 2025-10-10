@@ -45,6 +45,7 @@
 console.log(  duplicate([1,2,3,4,5]) );
 
 }
+// q-6 write a function that reverse a number
 {
   function reverse(num){
     return Number(num.toString().split("").reverse().join(""))
@@ -52,4 +53,50 @@ console.log(  duplicate([1,2,3,4,5]) );
   console.log(reverse(34));
   
 }
-
+// q-7 wirte s javascript fubction that checks wether a passed string in palindrome or not
+{
+  function stringplachack(str){
+    
+    str.split("")
+    let reverse = str.split("").reverse().join("");
+    return reverse
+  }
+  let str = prompt("enter a word")
+  let result = stringplachack(str);
+  if(str == result){
+      console.log("word is palindrome");
+    }
+    else {
+      console.log("word is not palindrome");
+    }
+  }
+  // q-8 write  a javascript function that returns a passed string with letters in alphabetical order
+  {
+    function stringaplha(str){
+      return str.split("").sort()
+  }
+  console.log(stringaplha("amaan"));
+  
+}
+// q-9
+{
+  let str = "the quick brown fox";
+  function upper(str){
+    let arr = str.split(" ")
+    for(let i=0;i<arr.length;i++){
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+    }
+    return arr.join(" ")
+  }
+  console.log(upper(str));
+}
+{
+  function occ(str){
+    let occurrences = {};
+    str.split("").forEach(function (elem) {
+      occurrences.hasOwnProperty(elem) ? occurrences[elem]++ : occurrences[elem] = 1;
+    });
+    return occurrences;
+  }
+  console.log(occ("amaan"));
+}
