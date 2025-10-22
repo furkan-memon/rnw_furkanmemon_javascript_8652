@@ -1,82 +1,46 @@
-{
-    let obj = {
-    name : "amaan",
-    age : 19,
-}
-console.log(obj.name);
-console.log(obj['age']);
-}
-{
-    let user = {
- name: "Amit",
- address: {
- city: "Delhi",
- pincode: 110001
+//  selecting element in dom
+ {
+    let abcd = document.getElementById("hi")
+    let abcd1 = document.getElementsByClassName("hi")
+   let abcd2 = document.querySelector("h1")
+   let abcd3 = document.querySelectorAll("h1")
+    console.log(abcd);
+    console.log(abcd1);
+    console.log(abcd2);
+    console.log(abcd3);
+    
  }
-};
-console.log(user.address.city); // Delhi
-}
-// Object Destructuring
+//  text content access and change
 {
-   let user = {
- name: "Amit",
- address: {
- city: "Delhi",
- pincode: 110001
- }
-};
-let {pincode, city} = user.address
-console.log(pincode);
-
-}
-// Looping Through Objects
-{
-    let user = {
-        name: "Amit",
-        address: {
-            city: "Delhi",
-            pincode: 110001
-        }
-    };
-console.log(Object.keys(user));
-
- console.log(Object.entries(user));
- 
-    for (let key in user) {
-        console.log(key, user[key]);
+// text content access
+    {
+      let abcd2 = document.querySelector("h1")
+      abcd2.textContent = "hii,amaan here"
+    
     }
+// innerHTML access
+{
+    let abcd2 = document.querySelector("h1")
+    abcd2.innerHTML = "<strong>hii,amaan here</strong>"
+    abcd2.hidden = true
+}
+// innerText access
+{
+    let abcd2 = document.querySelector("h1")
+    abcd2.innerText = "hi,amaan here"
+}
+}
+// Attribute access and change
+{
+    // setAttribute and getAttribute
+    {
 
-}
-// Copying Objects
-{
-    let user = {
-        name: "Amit",
-        address: {
-            city: "Delhi",
-            pincode: 110001
-        }
-    };
-    let userCopy = {...user};
-    let newOne = Object.assign({}, user);
-    let deepCopy = JSON.parse(JSON.stringify(user)); // Deep copy
-    console.log(userCopy);
-    console.log(newOne);
-    console.log(deepCopy);
-}
-{
-    let student = {
-        name: "John",
-        age :19,
-        isEnrolled: true
-    };
-    console.log(student);
-}
-{
-    let key = "age"
-    let student = {
-        name: "John",
-        age: 19,
-        isEnrolled: true
-    };
-    console.log(student[age]);
+        let abcd2 = document.querySelector("a")
+        abcd2.href = "https://www.google.com"
+        abcd2.target = "_blank"
+    }
+    {
+        let abcd2 = document.querySelector(".link1")
+      abcd2.getAttribute("href")
+    }
 }
