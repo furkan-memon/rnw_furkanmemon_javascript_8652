@@ -111,12 +111,3 @@ name.style.width = "100px"
         
     );
 
-   });
-   for(let i = 0 ; i<lii.length;i++)
-   {
-    console.log(lii[i].textContent);
-    
-   }
-  }
-
-}
