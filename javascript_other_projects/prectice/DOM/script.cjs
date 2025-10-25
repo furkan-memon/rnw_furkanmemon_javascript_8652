@@ -111,3 +111,48 @@ name.style.width = "100px"
         
     );
 
+   });
+   for(let i = 0 ; i<lii.length;i++)
+   {
+    console.log(lii[i].textContent);
+    
+   }
+  }
+
+}
+{
+    let pe = document.querySelector(".pe")
+    pe.innerHTML = "<b> Anime is a style of Japanese animation that is characterized by its distinct art style, which often includes expressive eyes and detailed lines,</b>"
+}
+{
+    let src =  document.querySelector("img")
+    src.src = "https://images.unsplash.com/photo-1761159021632-3cfad47be594?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+}
+{
+    let hj = document.querySelector(".link1")
+        hj.href = "https://unsplash.com/photos/misty-mountains-with-pine-trees-and-dry-grass-0xJXFa7lIyo"
+        hj.target = " _blank"    
+}
+{
+    let div = document.querySelector("#kids")
+    div.setAttribute("title" , "hi watchars")
+}
+{
+ let l  = document.querySelector("ul")
+  let i = document.createElement("li")
+    i.textContent = "graps"
+    l.appendChild(i)
+    
+}
+{
+    let ul = document.querySelector("ul")
+    let li = document.querySelector("li")
+    li.remove()
+}
+{
+    let ul = document.querySelectorAll("ul li:nth-child(2n)")
+    ul.forEach(function (val){
+        val.classList.add("highlight")
+    })
+    
+}
