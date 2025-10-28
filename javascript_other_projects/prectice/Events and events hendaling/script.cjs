@@ -68,3 +68,10 @@ input.addEventListener("input",function(data){
     
   })
 }
+{
+  let form = document.querySelector("form")
+            form.addEventListener("submit",function(val){
+                val.preventDefault()
+                
+            })
+}
