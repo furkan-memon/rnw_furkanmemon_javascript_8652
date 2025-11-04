@@ -62,7 +62,7 @@ input:focus {
   font-size: 0.85rem;
   margin-top: 5px;
   height: 14px;
-  display: none;
+  display: block;
 }
 
 button {
@@ -81,7 +81,7 @@ button:hover {
   background-color: #0056b3;
 }
 .result{
-  color: red;
+  color: green;
   text-align: center;
   margin-top: 5px;
 }
