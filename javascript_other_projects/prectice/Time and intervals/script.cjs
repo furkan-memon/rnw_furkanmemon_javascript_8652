@@ -21,3 +21,16 @@
 
   clearInterval(intervalId);  
 }
+{
+  let count = 0;
+  let intervalId = document.querySelector(".progress")
+  setInterval(function(){
+    if(count>=100){
+      clearInterval()
+      return
+    }
+  count++
+  intervalId.style.width = count + "%"
+  document.querySelector(".percent").textContent = count + "%"
+  },30)
+}

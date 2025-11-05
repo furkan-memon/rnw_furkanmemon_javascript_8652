@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Simulation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .download-box {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    width: 300px;
+    text-align: center;
+  }
+
+  .download-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #30363d;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #58a6ff, #1f6feb);
+    border-radius:+ 6px;
+    animation: download 5s linear infinite;
+  }
+
+  
+  .percent {
+    margin-top: 15px;
+    font-size: 16px;
+    /* color: #58a6ff; */
+    animation: percentChange 5s linear infinite;
+  }
+
+ 
+ 
+
+  /* Optional: button styling */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #238636;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #2ea043;
+  }
+</style>
 </head>
 <body>
-    <script src="./script.cjs"></script>
+  <div class="download-box">
+    <h2>Downloading File...</h2>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="percent">0%</div>
+    <!-- <button>Cancel</button> -->
+  </div>
+  <script src="./script.cjs"></script>
 </body>
 </html>
