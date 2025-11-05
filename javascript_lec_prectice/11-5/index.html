@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Working Example</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .download-box {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    width: 300px;
+    text-align: center;
+  }
+
+  .download-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #30363d;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #58a6ff, #1f6feb);
+    border-radius: 6px;
+   
+    
+  }
+
+ 
+
+  .percent {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #58a6ff;
+    animation: percentChange 5s linear infinite;
+  }
+
+  
+  /* Optional: button styling */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #238636;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #2ea043;
+    
+  }
+
+
+  .loader {
+    border: 6px solid #30363d;     /* Light gray border */
+    border-top: 6px solid #58a6ff; /* Blue top border */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Optional text */
+  .text {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+    
+  }
+
+  .container {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+#userInfo{
+    display: flex;
+    flex-direction: column;
+    /* align-items: cent; */
+}
+</style>
+<body>
+
+    <h1>AJAX XHR Example</h1>
+    <button id="loadButton"  >Load Quote </button>
+    <div id="userInfo" style="margin-top: 20px; padding: 15px; border: 1px dashed #009688;">
+     
+    <div class="container">
+        <div class="loader"></div>
+        <div class="text">
+
+             your quote will be here...
+        </div>
+        </div>
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>
