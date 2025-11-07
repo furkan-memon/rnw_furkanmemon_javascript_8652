@@ -17,3 +17,49 @@ console.log(val);
 console.log(val);
 
 }                  
+{
+    // SessionStorage Example
+    // Storing data
+    sessionStorage.setItem('sessionUser', 'furkanmemon');
+    sessionStorage.setItem('sessionAge', 25);
+    let sessionVal = sessionStorage.getItem("sessionUser");
+    console.log(sessionVal);
+    // sessionStorage.removeItem("sessionUser")
+    // sessionStorage.clear() // to clear all session storage
+    console.log(sessionVal);
+}
+{
+    localStorage.setItem("num",JSON.stringify([1,2,3,4,5]))
+}
+{
+   
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function applyTheme(theme) {
+  document.body.classList.toggle('dark', theme === 'dark');
+  document.body.classList.toggle('light', theme === 'light');
+  localStorage.setItem('theme', theme);
+}
+
+function getSystemTheme() {
+  return prefersDark.matches ? 'dark' : 'light';
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || getSystemTheme());
+}
+
+prefersDark.addEventListener('change', () => {
+  if (!localStorage.getItem('theme')) applyTheme(getSystemTheme());
+});
+
+document.getElementById('toggleTheme').addEventListener('click', () => {
+  const newTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+  applyTheme(newTheme);
+});
+
+initTheme();
+
+
+}
