@@ -1,96 +1,318 @@
+/* --- GLOBAL STYLES & LAYOUT --- */
 body {
-    background: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background */
+    display: flex;
+    /* Use column layout for better viewing of both large components */
+    flex-direction: column; 
+    gap: 60px;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* --- 1. PROFILE CARD STACK STYLING --- */
+
+.main-component-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align elements to the top */
+    gap: 20px;
+}
+
+/* Controls & Palette (Basic Styling) */
+.card-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    color: #444;
 }
 
-.card {
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Move palette up slightly to align with the top of the cards */
+    margin-top: 10px; 
+}
+
+.color-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.black-dot { background-color: black; }
+.purple-dot { background-color: #a020f0; } 
+.orange-dot { background-color: #ff9933; } 
+.teal-dot { background-color: #00cccc; }
+
+/* --- CARD STACKING LOGIC (Using Position Absolute) --- */
+
+.card-stack-wrapper {
     position: relative;
-    width: 200px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 28px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-
+    width: 350px;
+    height: 380px; /* Space needed for the main card and its offsets */
 }
 
-.bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+    height: 330px; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    padding: 30px;
+    box-sizing: border-box; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
 }
-h2{
-    color: wheat;
-    font-size: 20px;
-    padding: 20px;
-    border: 2px solid white;
+
+/* Positioning and Z-index for the stack */
+#card-1 {
+    z-index: 3;
+    top: 0;
+    left: 0;
 }
-/* .blurred-layer {
 
-    position: absolute;
+#card-2 {
+    z-index: 2;
+    top: 6px;    
+    left: 6px;   
+}
 
-    bottom: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background-image: url("https://plus.unsplash.com/premium_photo-1679692887717-dc7f5d090271?q=80&w=774&auto=format&fit=crop");
-
-    background-size: cover;
-    background-position: bottom;
-
-    filter: blur(10px);
-
+#card-3 {
     z-index: 1;
-
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-
-    mask-size: 100% 100%;
-
-    mask-repeat: no-repeat;
-
-
-
-    -webkit-mask-image: linear-gradient(to top,
-
-            rgba(0, 0, 0, 1),
-
-            rgba(0, 0, 0, 0));
-
-    -webkit-mask-size: 100% 100%;
-
-    -webkit-mask-repeat: no-repeat;
-
-} */
-.content {
-
- position: absolute;
-
- bottom: 20px;
-
- left: 20px;
-
- color: white;
- z-index: 2;
-
+    top: 12px;   
+    left: 12px;  
 }
 
+/* --- CARD CONTENT STYLING (Only for the visible Card 1) --- */
 
-
-.content h3 {
-
- font-size: 18px;
-
- font-weight: bold;
- margin-bottom: 6px;
+#card-1 .profile-image-container {
+    margin-bottom: 20px;
 }
-.content p {
- font-size: 14px;
- color:#ddd;
- line-height: 1.4;
+
+#card-1 .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black; 
+    box-shadow: 0 0 0 5px #ff6600; 
+}
+
+#card-1 .user-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+#card-1 .profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#card-1 .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+#card-1 .info-label {
+    color: #888;
+    font-weight: 500;
+}
+
+#card-1 .info-value {
+    color: #333;
+    font-weight: 600;
+}
+
+#card-1 .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+#card-1 .action-btn {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#card-1 .call-btn {
+    background-color: black;
+    color: white;
+}
+
+#card-1 .message-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* --- 2. LIGHT MODE FORM STYLING --- */
+
+.component-wrapper.form-display {
+    max-width: 440px;
+    width: 100%;
+}
+
+.form-container {
+    background-color: white; 
+    border-radius: 15px;
+    padding: 35px 30px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* New Rule for Form Visibility (for JS) */
+.form-display.hidden .form-container {
+    display: none; 
+}
+
+.form-container h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: white; 
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1em;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder,
+input[type="url"]::placeholder,
+textarea::placeholder {
+    color: #a0a0a0;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* --- Radio Button Styling (Categories) --- */
+.category-options {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.radio-group { 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-label { 
+    background-color: white;
+    color: #666;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    border: 1px solid #d0d0d0;
+}
+
+input[type="radio"] { 
+    display: none;
+}
+
+/* Error Styling */
+.URL-error, .name-error, .home-error, .purpose-error, .redio-error {
+    display: none; /* Hidden by default, shown by JS */
+    color: #ff3b30 !important;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Color definitions */
+.radio-label.emergency { border-color: #ff6347; color: #ff6347; } 
+.radio-label.important { border-color: #cc6633; color: #cc6633; } 
+.radio-label.urgent { border-color: #6a0dad; color: #6a0dad; } 
+.radio-label.no-rush { border-color: #d0d0d0; }
+
+/* Checked State - Fills the background with color and uses white text */
+input[type="radio"]:checked + .radio-label { 
+    color: white !important;
+    border: 1px solid transparent !important;
+}
+
+input[type="radio"]:checked + .radio-label.emergency { background-color: #ff6347; }
+input[type="radio"]:checked + .radio-label.important { background-color: #cc6633; }
+input[type="radio"]:checked + .radio-label.urgent { background-color: #6a0dad; }
+input[type="radio"]:checked + .radio-label.no-rush { background-color: #b0b0b0; }
+
+/* Buttons */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.create-note-btn {
+    background-color: #000; 
+    color: #ffffff;
+}
+
+.close-btn {
+    background-color: #ff3b30; 
+    color: #ffffff;
+    margin-top: 10px;
 }

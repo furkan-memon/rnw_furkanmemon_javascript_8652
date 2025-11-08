@@ -1,25 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Profile Card and Light Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<div class="flex flex-col gap-10 items-center">
+<body>
+    
+   <div class="main-component-wrapper">
+        <div class="card-controls">
+            <button id="add-btn" class="control-btn"><i class="fas fa-plus"></i></button>
+            <button class="control-btn"><i class="fas fa-arrow-up"></i></button>
+            <button class="control-btn"><i class="fas fa-arrow-down"></i></button>
+        </div>
 
-    <input class="inp px-5 py-5 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
-<h2>All user</h2>
-    <div class=" cards flex gap-10">
+        <div class="card-stack-wrapper">
+            <div class="profile-card" id="card-1">
+                <div class="profile-image-container">
+                    <div class="profile-image"></div>
+                </div>
+                <div class="profile-details">
+                    <h2 class="user-name">Fatima Uma</h2>
+                    <div class="info-row">
+                        <span class="info-label">Home town</span>
+                        <span class="info-value">Singapore</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Bookings</span>
+                        <span class="info-value">3 times</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn call-btn"><i class="fas fa-phone-alt"></i> Call</button>
+                        <button class="action-btn message-btn">Message</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="profile-card" id="card-2"></div>
+            
+            <div class="profile-card" id="card-3"></div>
 
+        </div>
+
+        <div class="color-palette">
+            <div class="color-dot black-dot"></div>
+            <div class="color-dot purple-dot"></div>
+            <div class="color-dot orange-dot"></div>
+            <div class="color-dot teal-dot"></div>
+        </div>
     </div>
-</div>
 
 
-<script src="./script.cjs"></script>
+    <div class="component-wrapper form-display">
+        <div class="form-container">
+            <h1>New Call</h1>
+
+         <form id="userForm" novalidate>
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    <input  type="url"  id="imageUrl" placeholder="https://example.com/photo.jpg">
+    <span class="URL-error" ></span>
+  </div>
+
+  <div class="form-group">
+    <label for="fullName">Full Name</label>
+    <input required type="text" id="fullName" placeholder="Enter full name">
+    <span class="name-error" ></span>
+  </div>
+
+  <div class="form-group">
+    <label for="homeTown">Home Town</label>
+    <input required type="text" id="homeTown" placeholder="Enter home town">
+    
+    <span class="home-error"></span>
+  </div>
+
+  <div class="form-group">
+    <label for="purpose">Purpose</label>
+    <textarea required id="purpose" rows="3" placeholder="e.g., Quick appointment note"></textarea>
+    <span class="purpose-error"></span>
+   
+  </div>
+
+  <div class="form-group">
+    <label>Category</label>
+    <div class="category-options">
+      <div class="radio-group">
+        <input required type="radio" id="emergency" name="category" value="emergency">
+        <label for="emergency" class="radio-label emergency">Emergency</label>
+      </div>
+      <div class="radio-group">
+        <input required type="radio" id="important" name="category" value="important">
+        <label for="important" class="radio-label important">Important</label>
+      </div>
+      <div class="radio-group">
+        <input required type="radio" id="urgent" name="category" value="urgent">
+        <label for="urgent" class="radio-label urgent">Urgent</label>
+      </div>
+      <div class="radio-group">
+        <input required type="radio" id="noRush" name="category" value="noRush">
+        <label for="noRush" class="radio-label no-rush">No Rush</label>
+      </div>
+    </div>
+    <span class="redio-error" id="categoryError"></span>
+  </div>
+
+  <input type="submit" class="submit-btn create-note-btn" value="Create Note">
+  <button type="button" id="close" class="submit-btn close-btn">Close</button>
+</form>
+
+        </div>
+    </div>
+<script src="script.cjs"></script>
 </body>
-
 </html>
