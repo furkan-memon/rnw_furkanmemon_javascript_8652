@@ -270,7 +270,6 @@ input[type="radio"] {
 
 /* Error Styling */
 .URL-error, .name-error, .home-error, .purpose-error, .redio-error {
-    display: none; /* Hidden by default, shown by JS */
     color: #ff3b30 !important;
     font-size: 0.9em;
     margin-top: 5px;

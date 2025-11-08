@@ -137,7 +137,7 @@ form.addEventListener("submit", function (eve) {
     })
    form.reset()
    formContainer.style.display = "none"
-   document.querySelector('.main-component-wrapper').style.display = 'block';
+   document.querySelector('.main-component-wrapper').style.display = 'flex';
 
 })
 
