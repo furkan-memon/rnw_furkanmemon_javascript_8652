@@ -78,7 +78,24 @@ body {
     left: 0;
     padding: 30px;
     box-sizing: border-box; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    /* box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.08), 
+        0 16px 0 0 #e6e6e6, 
+        0 16px 20px rgba(0, 0, 0, 0.05), 
+        0 24px 0 0 #e6e6e6, 
+        0 24px 25px rgba(0, 0, 0, 0.03); 
+} */}
+.profile-card:nth-child(1) {
+  z-index: 3;
+  transform: scale(1) translateY(0);
+}
+.profile-card:nth-child(2) {
+  z-index: 2;
+  transform: scale(0.95) translateY(15px);
+}
+.profile-card:nth-child(3) {
+  z-index: 1;
+  transform: scale(0.9) translateY(30px);
 }
 #card-1 {
     z-index: 0;

@@ -228,7 +228,8 @@ function updetstack(){
     let cards = document.querySelectorAll(".profile-card")
     cards.forEach(function(cards,index){
         cards.style.zIndex = 3 - index
-  cards.style.top = `${index * 6}px`;
+        cards.style.transform = `translateY(${index * 10}ps) scale(${1-index * 0.02})`
+  cards.style.opacity = `${1 - index * 0.02}px`;
     })
 }
 addcards()
