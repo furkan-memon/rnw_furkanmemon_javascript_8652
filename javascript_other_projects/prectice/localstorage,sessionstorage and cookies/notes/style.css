@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: flex-start; /* Align elements to the top */
     gap: 20px;
+   /* grid-template-columns:1fr 1fr 1fr; */
 }
 
 /* Controls & Palette (Basic Styling) */
@@ -46,8 +47,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* Move palette up slightly to align with the top of the cards */
     margin-top: 10px; 
+    
 }
 
 .color-dot {
@@ -61,13 +62,10 @@ body {
 .purple-dot { background-color: #a020f0; } 
 .orange-dot { background-color: #ff9933; } 
 .teal-dot { background-color: #00cccc; }
-
-/* --- CARD STACKING LOGIC (Using Position Absolute) --- */
-
 .card-stack-wrapper {
     position: relative;
     width: 350px;
-    height: 380px; /* Space needed for the main card and its offsets */
+    height: 380px; 
 }
 
 .profile-card {
@@ -82,77 +80,76 @@ body {
     box-sizing: border-box; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
 }
-
-/* Positioning and Z-index for the stack */
 #card-1 {
-    z-index: 3;
+    z-index: 0;
     top: 0;
     left: 0;
 }
-
 #card-2 {
-    z-index: 2;
-    top: 6px;    
-    left: 6px;   
+    z-index: 14;
+    /* top: 6px;     */
+    /* left: 6px;    */
 }
-
 #card-3 {
     z-index: 1;
-    top: 12px;   
-    left: 12px;  
+    /* top: 1px;    */
+    /* left: 12px;   */
 }
 
 /* --- CARD CONTENT STYLING (Only for the visible Card 1) --- */
-
-#card-1 .profile-image-container {
+ .profile-image-container {
     margin-bottom: 20px;
 }
 
-#card-1 .profile-image {
+ .profile-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: black; 
-    box-shadow: 0 0 0 5px #ff6600; 
+    /* background-color: black;'  */
+    /* box-shadow: 0 0 0 5px #ff6600;  */
 }
 
-#card-1 .user-name {
+ .user-name {
     font-size: 1.5em;
     font-weight: 700;
     margin: 0 0 20px 0;
 }
 
-#card-1 .profile-details {
+ .profile-details {
     display: flex;
     flex-direction: column;
 }
 
-#card-1 .info-row {
+ .info-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 0.95em;
 }
 
-#card-1 .info-label {
+ .info-label {
     color: #888;
     font-weight: 500;
 }
 
-#card-1 .info-value {
+ .info-value {
     color: #333;
     font-weight: 600;
 }
 
-#card-1 .action-buttons {
+ .action-buttons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #f0f0f0;
 }
-
-#card-1 .action-btn {
+.profile-image   img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+ .action-btn {
     flex: 1;
     padding: 12px 0;
     border: none;
@@ -162,12 +159,12 @@ body {
     cursor: pointer;
 }
 
-#card-1 .call-btn {
+ .call-btn {
     background-color: black;
     color: white;
 }
 
-#card-1 .message-btn {
+ .message-btn {
     background-color: #f0f0f0;
     color: #333;
 }
@@ -315,3 +312,8 @@ input[type="radio"]:checked + .radio-label.no-rush { background-color: #b0b0b0; 
     color: #ffffff;
     margin-top: 10px;
 }
+  /* imageUrl: imageUrlInput.value,
+        fullName: fullNameInput.value,
+        homeTown: homeTownInput.value,
+        purpose: purposeInput.value,
+        category: categorySelected */
