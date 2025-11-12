@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Recipe Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>🥘 Modern Recipe Hub</h1>
+    </header>
+
+    <div class="main-layout">
+        
+        <div id="recipe-cards-container" class="card-grid-panel">
+            <div class="recipe-card btn1" data-id="1"> 
+                <h3>Grilled Cheese</h3>
+                <p>Get Recipee</p>
+            </div>
+            <div class="recipe-card btn2" data-id="2">
+                <h3>Spicy Thai Green Curry</h3>
+                <p>Get Recipee</p>
+            </div>
+            <div class="recipe-card btn3" data-id="3">
+                <h3>Chocolate Chip Cookies</h3>
+                <p>Get Recipee</p>
+            </div>
+        </div>
+        
+        <div id="recipe-output" class="details-panel">
+            <h2 class="Fetching-text">Loading recipes...</h2>
+            <h2 class="placeholder-text">Select a recipe card to view the instructions and ingredients.</h2>
+            
+            <div id="recipeCard" class="recipe-card hidden">
+                <h2 id="recipeName" class="recipe-name"></h2>
+                <img id="recipeImage" class="recipe-image"/>
+                <h3 class="ingredients-heading">Ingredients</h3>
+                <ul id="recipeIngredients" class="recipe-ingredients-list"></ul>
+                <h3 class="instructions-heading">Instructions</h3>
+                <p id="recipeInstructions" class="recipe-instructions-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
