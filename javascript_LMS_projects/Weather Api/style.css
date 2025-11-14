@@ -1,0 +1,124 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.header-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+.controls-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.city-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.city-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+.search-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.search-btn:hover {
+    background-color: #2980b9;
+}
+.status-message {
+    min-height: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.loading-message {
+    color: #3498db;
+    animation: pulse 1.5s infinite;
+}
+
+.error-message {
+    color: #e74c3c;
+}
+.weather-result {
+    padding: 15px 0;
+}
+.initial-message {
+    color: #7f8c8d;
+    font-style: italic;
+}
+.weather-card {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.city-name {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+.temp-main {
+    font-size: 4em;
+    font-weight: 800;
+    color: #f39c12;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.weather-desc {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+}
+.detail-item {
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    border-left: 4px solid #95a5a6;
+}
+.detail-label {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+.detail-value {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 3px;
+}

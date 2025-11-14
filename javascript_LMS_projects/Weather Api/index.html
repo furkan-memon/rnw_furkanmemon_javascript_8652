@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWeatherMap Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="header-title">Global Weather Lookup</h1>
+        </header>
+
+        <div class="controls-container">
+            <input type="text" id="city-input" placeholder="Enter City Name " class="city-input">
+            <button id="search-btn" class="search-btn">
+                Get Weather
+            </button>
+        </div>
+
+        <div id="status-message" class="status-message"></div>
+
+        <div id="weather-result" class="weather-result">
+            <p class="initial-message">Search for a city to see the current weather.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
