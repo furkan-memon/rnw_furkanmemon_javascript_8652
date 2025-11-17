@@ -140,111 +140,108 @@ form.addEventListener("submit", function (eve) {
     })
     form.reset()
     formContainer.style.display = "none"
-    document.querySelector('.main-component-wrapper').style.display = 'flex';
-
+    addcards()
 })
 function addcards() {
     let alltask = JSON.parse(localStorage.getItem("task"))
-    alltask.forEach(function(task,index){
+    alltask.forEach(function (task, index) {
         // Create the main card
-       
-        
-  const card = document.createElement("div");
-    card.classList.add("profile-card");
-    card.id = `card-${index + 1}`;
-  
-// Profile image container
-const imageContainer = document.createElement('div');
-imageContainer.classList.add('profile-image-container');
 
-// Profile image
-const profileImage = document.createElement('div');
-profileImage.classList.add('profile-image');
-const img = document.createElement('img')
-img.src = task.imageUrl;
-profileImage.appendChild(img)
-// Append image to container
-imageContainer.appendChild(profileImage);
 
-// Profile details container
-const details = document.createElement('div');
-details.classList.add('profile-details');
+        const card = document.createElement("div");
+        card.classList.add("profile-card");
+        card.id = `card-${index + 1}`;
 
-// User name
-const userName = document.createElement('h2');
-userName.classList.add('user-name');
-userName.textContent = task.fullName;
+        // Profile image container
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('profile-image-container');
 
-// Info rows
-const homeRow = document.createElement('div');
-homeRow.classList.add('info-row');
-homeRow.innerHTML = `
+        // Profile image
+        const profileImage = document.createElement('div');
+        profileImage.classList.add('profile-image');
+        const img = document.createElement('img')
+        img.src = task.imageUrl;
+        profileImage.appendChild(img)
+        // Append image to container
+        imageContainer.appendChild(profileImage);
+
+        // Profile details container
+        const details = document.createElement('div');
+        details.classList.add('profile-details');
+
+        // User name
+        const userName = document.createElement('h2');
+        userName.classList.add('user-name');
+        userName.textContent = task.fullName;
+
+        // Info rows
+        const homeRow = document.createElement('div');
+        homeRow.classList.add('info-row');
+        homeRow.innerHTML = `
   <span class="info-label">Home town</span>
   <span class="info-value">${task.homeTown}</span>
 `;
 
-const bookingsRow = document.createElement('div');
-bookingsRow.classList.add('info-row');
-bookingsRow.innerHTML = `
+        const bookingsRow = document.createElement('div');
+        bookingsRow.classList.add('info-row');
+        bookingsRow.innerHTML = `
   <span class="info-label">Purpose</span>
   <span class="info-value">${task.purpose}</span>
 `;
 
-// Action buttons container
-const actionButtons = document.createElement('div');
-actionButtons.classList.add('action-buttons');
+        // Action buttons container
+        const actionButtons = document.createElement('div');
+        actionButtons.classList.add('action-buttons');
 
-// Call button
-const callBtn = document.createElement('button');
-callBtn.classList.add('action-btn', 'call-btn');
-callBtn.innerHTML = `<i class="fas fa-phone-alt"></i> Call`;
+        // Call button
+        const callBtn = document.createElement('button');
+        callBtn.classList.add('action-btn', 'call-btn');
+        callBtn.innerHTML = `<i class="fas fa-phone-alt"></i> Call`;
 
-// Message button
-const messageBtn = document.createElement('button');
-messageBtn.classList.add('action-btn', 'message-btn');
-messageBtn.textContent = 'Message';
+        // Message button
+        const messageBtn = document.createElement('button');
+        messageBtn.classList.add('action-btn', 'message-btn');
+        messageBtn.textContent = 'Message';
 
-// Append buttons
-actionButtons.appendChild(callBtn);
-actionButtons.appendChild(messageBtn);
+        // Append buttons
+        actionButtons.appendChild(callBtn);
+        actionButtons.appendChild(messageBtn);
 
-// Append all details
-details.appendChild(userName);
-details.appendChild(homeRow);
-details.appendChild(bookingsRow);
-details.appendChild(actionButtons);
+        // Append all details
+        details.appendChild(userName);
+        details.appendChild(homeRow);
+        details.appendChild(bookingsRow);
+        details.appendChild(actionButtons);
 
-// Build final card
-card.appendChild(imageContainer);
-card.appendChild(details);
+        // Build final card
+        card.appendChild(imageContainer);
+        card.appendChild(details);
 
-// Append to page (e.g., body or container)
-document.querySelector(".card-stack-wrapper").appendChild(card);
+        // Append to page (e.g., body or container)
+        document.querySelector(".card-stack-wrapper").appendChild(card);
 
 
     })
 }
-function updetstack(){
+function updetstack() {
     let cards = document.querySelectorAll(".profile-card")
-    cards.forEach(function(cards,index){
-        cards.style.zIndex = 3 - index
-        cards.style.transform = `translateY(${index * 10}ps) scale(${1-index * 0.02})`
-  cards.style.opacity = `${1 - index * 0.02}px`;
-    })
-}
+    for(let i = 0 ;i<3;i++){
+        cards.style.zIndex = 3 - i
+        cards.style.transform = `translateY(${i * 10}px) scale(${1 - i* 0.02})`
+        cards.style.opacity = `${1 - i* 0.02} `;
+    }}
 addcards()
-up.addEventListener("click",function(){
-let lastchilde = stack.lastElementChild
-if(lastchilde){
-    stack.insertBefore(lastchilde,stack.firstElementChild)
-    updetstack()
-}
+up.addEventListener("click", function () {
+    let lastchilde = stack.lastElementChild
+    if (lastchilde) {
+        stack.insertBefore(lastchilde, stack.firstElementChild)
+        updetstack()
+    }
 })
-down.addEventListener("click",function(){
+down.addEventListener("click", function () {
     let firstchilde = stack.firstElementChild
-if(firstchilde){
-    stack.insertBefore(firstchilde,stack.lastElementChild)
-    updetstack()
-}
+    if (firstchilde) {
+        stack.insertBefore(firstchilde, stack.lastElementChild)
+        updetstack()
+    }
 })
-    
