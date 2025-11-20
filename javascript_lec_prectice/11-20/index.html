@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    li { cursor: pointer; margin: 6px 0; }
+    .highlight { color: blue; font-weight: bold; }
+    #output { margin-top: 20px; padding: 10px; background: #eee; }
+  </style>
+</head>
+<body>
+
+  <h2>Destinations</h2>
+  <ul id="list">
+    <li>Tokyo</li>
+    <li>Paris</li>
+    <li>Dubai</li>
+  </ul>
+
+  <button id="btnNext">Show Next Item</button>
+  <button id="btnParent">Show Parent</button>
+  <button id="btnAjax">AJAX Example</button>
+
+  <div id="output"></div>
+
+  <script>
+    let selectedItem = null;
+    $('#list li').on('click', function () {
+      $('#list li').removeClass('highlight');
+      $(this).addClass('highlight');
+      selectedItem = $(this);
+      $('#output').text("Selected: " + selectedItem.text());
+    });
+
+  
+    $('#btnNext').on('click', function () {
+      if (!selectedItem) return;
+      let nextItem = selectedItem.next().text() || "No next item";
+      $('#output').text("Next item: " + nextItem);
+    }); 
+
+    $('#btnParent').on('click', function () {
+      if (!selectedItem) return;
+      let parentTag = selectedItem.parent().prop("tagName");
+      $('#output').text("Parent element: " + parentTag);
+    });
+
+
+    $('#btnAjax').on('click', function () {
+      $.ajax({
+        url: "https://jsonplaceholder.typicode.com/posts/1",
+        method: "GET",
+        success: function (data) {
+          $('#output').text("AJAX Title: " + data.title);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
