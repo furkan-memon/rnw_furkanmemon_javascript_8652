@@ -1,0 +1,50 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Gradient background for an attractive look */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+}
+
+.key-card {
+    background-color: #ffffff;
+    padding: 50px 70px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.key-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.label {
+    font-size: 1.2em;
+    color: #6a11cb;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#key-display {
+    font-size: 8em; /* Massive text for immediate focus */
+    font-weight: 700;
+    color: #2575fc;
+    margin: 0 0 20px 0;
+    min-width: 250px;
+    /* Text shadow for depth */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #888;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 20px;
+}
