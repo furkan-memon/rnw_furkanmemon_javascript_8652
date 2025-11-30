@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled File Uploader</title>
+    
+    <style>
+        /* 🎨 CSS Styling */
+        
+        /* Basic page setup */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5; /* Light gray background */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* 1. File Upload Container (Optional grouping) */
+        .file-upload-container {
+            /* Using flex to align button content easily */
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 2. Style the visible button (.btn) */
+        .btn {
+            /* Standard Button Look */
+            padding: 15px 30px;
+            border: 2px solid #007bff; /* Primary color border */
+            border-radius: 8px; 
+            background-color: #007bff; /* Primary background */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            
+            /* Flex for Icon and Text */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 250px;
+            justify-content: center;
+        }
+
+        /* Hover effect */
+        .btn:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Active (click) state */
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* --- File Selected State (Visual Feedback) --- */
+        .btn.file-selected {
+            background-color: #28a745; /* Success green */
+            border-color: #28a745;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+        }
+        
+        .btn.file-selected:hover {
+            background-color: #1e7e34;
+            border-color: #1e7e34;
+        }
+
+        /* 3. Icon Styling */
+        .icon {
+            font-size: 20px;
+            line-height: 1; /* Ensures icon alignment */
+        }
+        
+        /* 4. Hide the actual file input (.inp) */
+        .inp {
+            /* Completely hide the default input */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="file-upload-container">
+        <button type="button" class="btn">
+            <span class="icon" id="btn-icon">📁</span>
+            <span id="btn-text">Select File to Upload</span>
+        </button>
+        
+        <input type="file" class="inp">
+    </div>
+
+    <script src="./script.cjs">
+        // ✨ JavaScript Logic (Based on your original code)
+        
+        let btn = document.querySelector(".btn")
+        let inp = document.querySelector(".inp")
+        
+        // Additional selectors for text and icon management
+        const btnText = document.getElementById("btn-text");
+        const btnIcon = document.getElementById("btn-icon");
+
+        // 1. Programmatically click the input when the button is clicked
+        btn.addEventListener("click",function (){
+            inp.click()
+        })
+        
+        // 2. Handle the file selection
+        inp.addEventListener("change",function(val){
+            let file = val.target?.files[0]
+            
+            if(file){
+                // Update text, icon, and button class
+                btnText.textContent = file.name
+                btnIcon.textContent = "✅" // Checkmark icon
+                btn.classList.add("file-selected")
+            } else {
+                // If the user cancels the dialog, reset everything
+                btnText.textContent = "Select File to Upload"
+                btnIcon.textContent = "📁" // Folder icon
+                btn.classList.remove("file-selected")
+            }
+        })
+    </script>
+</body>
+</html>
