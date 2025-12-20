@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FlavorFolio | Personal Recipe Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>🍳 FlavorFolio</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search recipes or ingredients...">
+                <select id="cuisineFilter">
+                    <option value="all">All Cuisines</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Indian">Indian</option>
+                </select>
+                
+                <button id="add" style="width: 10%;">Add</button>
+            </div>
+        </header>
+
+        <main id="main">
+            <section id="recipe-form-card" >
+                <h2>Add New Recipe</h2>
+                <form id="recipeForm">
+                    <div class="input-group">
+                        <input type="text" id="recipeTitle" placeholder="Recipe Name" required>
+                        <input type="text" id="recipeCuisine" placeholder="Cuisine (e.g. Italian)" required>
+                        <input type="text" id="recipeimg" placeholder="Recipe Image URL" required>
+                    </div>
+                    <textarea id="recipeIngredients" placeholder="Ingredients (comma separated)" required></textarea>
+                    <textarea id="recipeInstructions" placeholder="Cooking Instructions" required></textarea>
+                    <button type="submit" id="addBtn">Save Recipe</button>
+                </form>
+            </section>
+            <section id="recipeGrid" class="recipe-grid">
+
+           
+        </main>
+
+    </body>
+
+    </html>
+    <script src="script.js"></script>
+</body>
+
+</html>
