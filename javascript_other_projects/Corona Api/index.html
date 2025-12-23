@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Country Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="header-title">COVID-19 Country Data</h1>
+    
+    <div class="controls-container">
+        <input 
+            type="text" 
+            id="countryInput" 
+            placeholder="Enter Country Name (e.g., USA)"
+            class="country-input"
+        >
+        <button 
+            id="getData"
+            class="get-data-btn"
+        >
+            Get Data
+        </button>
+    </div>
+
+    <div id="error" class="error-message"></div>
+
+    <div id="result" class="result-container">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
