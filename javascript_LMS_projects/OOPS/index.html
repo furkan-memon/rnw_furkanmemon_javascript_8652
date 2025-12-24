@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Simple OOP Bank App</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Modern Digital Bank</title>
+ <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <div class="card">
-    <h3>Bank Account</h3>
+<div class="container">
+    <div id="setupSection">
+        <h2>Open Account</h2>
+        <input type="text" id="newName" placeholder="Full Name">
+        <input type="number" id="initialDeposit" placeholder="Initial Deposit ($)">
+        <button class="btn-primary" onclick="createNewAccount()">Create Account</button>
+    </div>
 
-    <input type="text" id="name" placeholder="Account Holder Name">
-    <input type="number" id="amount" placeholder="Enter Amount">
+    <div id="bankSection" class="hidden">
+        <h2 id="welcomeText">Welcome!</h2>
+        <div class="balance-box">
+            <small>Available Balance</small>
+            <div class="balance-amount">$<span id="balDisplay">0</span></div>
+        </div>
+        
+        <input type="number" id="transactAmount" placeholder="Enter Amount">
+        
+        <div style="display: flex; justify-content: space-between;">
+            <button class="btn-deposit" onclick="doDeposit()">Deposit</button>
+            <button class="btn-withdraw" onclick="doWithdraw()">Withdraw</button>
+        </div>
+        
+        <p id="statusMsg">Account active</p>
+    </div>
+</div>
 
-    <button onclick="createAccount()">Create Account</button>
-    <button onclick="deposit()">Deposit</button>
-    <button onclick="withdraw()">Withdraw</button>
-
-    <div class="balance" id="output"></div>
-  </div>
-
-  <script src="./script.js"></script>
+<script src="./script.js">
+ 
+</script>
 
 </body>
 </html>
-
