@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Digital Bank</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="setupSection">
+        <h2>Open Account</h2>
+        <input type="text" id="newName" placeholder="Full Name">
+        <input type="number" id="initialDeposit" placeholder="Initial Deposit ($)">
+        <button class="btn-primary" onclick="createNewAccount()">Create Account</button>
+    </div>
+
+    <div id="bankSection" class="hidden">
+        <h2 id="welcomeText">Welcome!</h2>
+        <div class="balance-box">
+            <small>Available Balance</small>
+            <div class="balance-amount">$<span id="balDisplay">0</span></div>
+        </div>
+        
+        <input type="number" id="transactAmount" placeholder="Enter Amount">
+        
+        <div style="display: flex; justify-content: space-between;">
+            <button class="btn-deposit" onclick="doDeposit()">Deposit</button>
+            <button class="btn-withdraw" onclick="doWithdraw()">Withdraw</button>
+        </div>
+        
+        <p id="statusMsg">Account active</p>
+    </div>
+</div>
+
+<script src="./script.js">
+ 
+</script>
+
+</body>
+</html>
